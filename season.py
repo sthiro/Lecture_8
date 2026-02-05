@@ -4,30 +4,24 @@ from datetime import date
 
 p = inflect.engine()
 
-
-def main():
-    print(Duration.Birthday())
     
 class Duration():
     def __init__(self, DOB):
         self.DOB = DOB
-        self.Date = date.today()
+        self.Date = date.today()   
 
+     
     @classmethod
-    def Birthday(cls):
-        try:
-            return cls(date.fromisoformat(input("Date of Birth: ")))
-    
-        except ValueError: # Invalid format
-            sys.exit("Invalid date")
+    def DOB_Date(cls, DOB):
+        try: return cls(date.fromisoformat(DOB))
+        except ValueError: sys.exit("Invalid date") # Invalid format
 
-    
+
     def Cal_duration_min(self):
-        
         today_date = self.Date
         duration_second = (today_date - self.DOB).total_seconds() # Operator overload
         total_min = round(duration_second / 60) #Round to nearest integer
-       # print(total_min,"Working")
+
         return total_min 
 
 
@@ -37,6 +31,11 @@ class Duration():
 
         return duration_text
 
+
+def main():
+
+    print(Duration.DOB_Date("2006-06-09"))
+    
 
 if __name__ == "__main__":
     main()
