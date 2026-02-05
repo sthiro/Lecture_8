@@ -2,10 +2,10 @@ import sys
 import inflect
 from datetime import date
 
-
+p = inflect.engine()
 
 def birthday_date():
-    return date.fromisoformat(input("Date of Birth: "))
+    return date.fromisoformat(input("Date of Birth: ")) 
 
 def duration():
     try:
@@ -21,7 +21,8 @@ def duration():
 def main():
 
     duration_min = duration()
-    print(duration_min)
+    duration_text = p.number_to_words(duration_min)
+    print(duration_text)
 
 
 if __name__ == "__main__":
