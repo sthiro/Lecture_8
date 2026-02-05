@@ -34,7 +34,7 @@ class Duration():
 
 def main():
 
-    print(Duration.DOB_Date("2006-06-09"))
+    print(Duration.DOB_Date(input("Date of Birth: ")))
     
 
 if __name__ == "__main__":
