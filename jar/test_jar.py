@@ -1,10 +1,10 @@
-from jar import Jar
 import pytest
+from jar import Jar
 
 def test_init():
-    assert Jar(5) 
+    assert Jar(5)
     assert Jar(0)
-    
+
     with pytest.raises(ValueError):
         Jar(-1)
         Jar("cat")

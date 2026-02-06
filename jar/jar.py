@@ -1,4 +1,3 @@
-
 class Jar():
     def __init__(self, capacity=12):
         self.int_checker(capacity, "capacity")
@@ -42,4 +41,3 @@ class Jar():
     def size(self):
         return self._size
 
-Jar(10)
