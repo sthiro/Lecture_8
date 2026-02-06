@@ -1,14 +1,5 @@
-# class Student:
-#     def __init__(self, name):
-#         self._name = name
-#         self.job = 'student'
+x = 10.0
+print(isinstance(x, int))   # True
 
-#     @property
-#     def lol(self):
-#         return self._name
-    
-# student = Student("Thiroshan")
-# print(student.lol)
-# print(student.job)
-f = 1.3
-print(f.is_integer())
+y = "10"
+print(isinstance(y, int))   # False

@@ -33,12 +33,30 @@ def test_deposit():
     with pytest.raises(ValueError):
         jar.deposit(13)
 
+    jar = Jar()
+    with pytest.raises(ValueError):
+        jar.deposit(4.3)
+
+    jar = Jar()
+    with pytest.raises(ValueError):
+        jar.deposit("text")
+
 
 def test_withdraw():
     jar = Jar(5)
+    jar.deposit(5)
+
     jar.withdraw(5)
     jar.withdraw(0)
-    
+
     with pytest.raises(ValueError):
         jar.withdraw(1)
+
+    jar = Jar()
+    with pytest.raises(ValueError):
+        jar.deposit(4.3)
+
+    jar = Jar()
+    with pytest.raises(ValueError):
+        jar.deposit("dog")
 
