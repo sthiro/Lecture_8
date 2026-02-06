@@ -17,4 +17,4 @@ pdf.set_text_color(255, 255, 255)  # white text
 pdf.set_font("helvetica", size=14)
 pdf.cell(text=f"{user_name} Harvard took CS50", h=110, center=True)
 
-pdf.output("tuto1.pdf")
+pdf.output("shirtificate.pdf")
