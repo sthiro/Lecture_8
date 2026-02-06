@@ -1,9 +1,9 @@
-from season import Duration
+from seasons import Duration
 import pytest
 
 def test_normal_response():
-    assert str(Duration.DOB_Date("2006-06-09")) == "ten million, three hundred and forty thousand, six hundred and forty" # str() calls __str__ inside class
-    assert str(Duration.DOB_Date("1998-01-15")) == "fourteen million, seven hundred and fifty-seven thousand, one hundred and twenty"
+    assert str(Duration.DOB_Date("2006-06-09")) == "Ten million, three hundred forty thousand, six hundred forty minutes" # str() calls __str__ inside class
+    assert str(Duration.DOB_Date("1998-01-15")) == "Fourteen million, seven hundred fifty-seven thousand, one hundred twenty minutes"
 
 
 def test_invalid_form():
